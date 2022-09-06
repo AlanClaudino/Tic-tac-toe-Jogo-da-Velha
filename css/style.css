@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .btn {
@@ -63,6 +63,10 @@ p {
 }
 
 /* Game screen */
+
+#main-content {
+  display: none;
+}
 
 .container {
   padding: 1rem;
@@ -110,3 +114,31 @@ p {
 }
 
 /* Animations */
+
+.fade-in {
+  animation: fade-in 500ms forwards;
+}
+
+.fade-out {
+  animation: fade-out 500ms forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
