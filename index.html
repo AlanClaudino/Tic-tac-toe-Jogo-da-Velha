@@ -5,23 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tic Tac Toe | Jogo da Velha</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <header>
+  <div id="start-game">
     <h1>Tic Tac Toe</h1>
-  </header>
-  <main id="main-content">
+    <p>By Alan Claudino</p>
     <button id="play-btn" class="btn">Play</button>
+  </div>
+  <main id="main-content">
     <div class="container">
       <div class="score-container">
-        <div id="player-x" class="players">
-          <div>X</div>
-          <div id="score-x">0</div>
-        </div>
-        <div id="player-o" class="players">
-          <div>O</div>
-          <div id="score-o">0</div>
-        </div>
+        <p id="player-x" class="underline">Player X</p>
+        <p id="player-o">Player O</p>
       </div>
       <div id="board">
         <div class="board-space" id="0"></div>
@@ -35,13 +31,10 @@
         <div class="board-space" id="8"></div>
       </div>
     </div>
-    <div id="new-game">
-      <p id="winner-message">Congratulation Player 1, you won!</p>
-      <button id="new-game-btn">New Game</button>
-    </div>
   </main>
-  <footer id="main-footer">
-    <p>Alan Claudino. &copy; All rights reserved</p>
-  </footer>
+  <div id="new-game">
+    <p id="winner-message"> Player X won!</p>
+    <button id="new-game-btn" class="btn">New Game</button>
+  </div>
 </body>
 </html>
