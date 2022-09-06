@@ -1,9 +1,8 @@
 :root {
-  --clr-100: #f5ffff;
-  --clr-200: #bef0ff;
-  --clr-300: #6dd7fd;
-  --clr-400: #0093cb;
-  --clr-500: #005acd;
+  --clr-100: #F6F54D;
+  --clr-200: #FEB139;
+  --clr-300: #F55353;
+  --clr-400: #143F6B;
 }
 
 * {
@@ -13,19 +12,19 @@
 }
 
 body {
-  background: linear-gradient(45deg, var(--clr-200) 0%, var(--clr-300) 100%);
+  background: linear-gradient(45deg, var(--clr-100) 0%, var(--clr-300) 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 .btn {
   font-size: 1rem;
   padding: 0.5rem;
-  background-color: var(--clr-500);
-  color: var(--clr-100);
+  background-color: var(--clr-400);
+  color: white;
   border: none;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
   margin: 1rem 0;
@@ -36,25 +35,30 @@ p {
   font-size: 1.5rem;
   font-weight: 700;
   padding: 0.5rem 1rem;
-  color: var(--clr-500);
+  color: var(--clr-400);
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--clr-400);
+  text-align: center;
 }
 
 .underline {
-  border-bottom: 3px solid var(--clr-500);
+  border-bottom: 3px solid var(--clr-400);
 }
 
 /* First Screen */
 
 #start-game {
-  color: var(--clr-500);
+  color: var(--clr-400);
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 
 #start-game h1 {
-  align-self: flex-start;
-  font-size: 3.5rem;
+  align-self: start;
 }
 
 #start-game p {
@@ -65,7 +69,8 @@ p {
 /* Game screen */
 
 #main-content {
-  /* display: none; */
+  display: none;
+  flex-direction: column;
 }
 
 .container {
@@ -83,7 +88,7 @@ p {
 }
 
 .score-container p {
- background-color: var(--clr-100);
+ background-color: var(--clr-200);
  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
  border-radius: 0.5rem;
 }
@@ -92,18 +97,18 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 0.5rem;
-  background-color: var(--clr-500);
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  /* background-color: var(--clr-400); */
+  /* box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2); */
   gap: 0.5rem;
   border-radius: 0.5rem;
 }
 
 .board-space {
   min-width: 5rem;
-  background-color: var(--clr-100);
+  background-color: var(--clr-200);
   min-height: 5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 2px rgba(20, 64, 107, 0.2);
 }
 
 .board-space {
@@ -112,15 +117,23 @@ p {
   justify-content: center;
   font-weight: 700;
   font-size: 4rem;
+  color: var(--clr-300);
+}
+
+.player-o-style {
+  color: var(--clr-400);
 }
 
 /* End game screen */
 
 #new-game {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
+#winner-message {
+  font-size: 2rem;
+}
 /* Animations */
 
 .fade-in {
