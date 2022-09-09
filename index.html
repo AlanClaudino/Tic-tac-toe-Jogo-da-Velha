@@ -8,33 +8,37 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <div id="start-game">
-    <h1>Tic Tac Toe</h1>
-    <p>By Alan Claudino</p>
-    <button id="play-btn" class="btn">Play</button>
-  </div>
-  <main id="main-content">
-    <div class="container">
-      <div class="score-container">
-        <p id="player-x">Player X</p>
-        <p id="player-o">Player O</p>
+  <div class="container">
+    <header>
+      <h1>Tic Tac Toe</h1>
+      <p>By Alan Claudino</p>
+    </header>
+    <main id="main-content">
+      <div id="start-game">
+        <button id="play-btn" class="btn">Play</button>
       </div>
-      <div id="board">
-        <div class="board-space" id="0"></div>
-        <div class="board-space" id="1"></div>
-        <div class="board-space" id="2"></div>
-        <div class="board-space" id="3"></div>
-        <div class="board-space" id="4"></div>
-        <div class="board-space" id="5"></div>
-        <div class="board-space" id="6"></div>
-        <div class="board-space" id="7"></div>
-        <div class="board-space" id="8"></div>
+      <div class="game-container">
+        <div class="score-container">
+          <p id="player-x">Player X</p>
+          <p id="player-o">Player O</p>
+        </div>
+        <div id="board">
+          <div class="board-space" id="0"></div>
+          <div class="board-space" id="1"></div>
+          <div class="board-space" id="2"></div>
+          <div class="board-space" id="3"></div>
+          <div class="board-space" id="4"></div>
+          <div class="board-space" id="5"></div>
+          <div class="board-space" id="6"></div>
+          <div class="board-space" id="7"></div>
+          <div class="board-space" id="8"></div>
+        </div>
       </div>
-    </div>
-  </main>
-  <div id="new-game">
-    <p id="winner-message"> Player X won!</p>
-    <button id="new-game-btn" class="btn">New Game</button>
+      <div id="new-game">
+        <p id="winner-message"> Player X won!</p>
+        <button id="new-game-btn" class="btn">New Game</button>
+      </div>
+    </main>
   </div>
   <script src="./javascript/script.js"></script>
 </body>

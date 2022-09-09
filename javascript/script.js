@@ -1,7 +1,7 @@
 // DOM Elements
 
 const startGame = document.getElementById('start-game');
-const mainContent = document.getElementById('main-content');
+const gameBoard = document.querySelector('.game-container');
 const newGame = document.getElementById('new-game');
 const boardSpace = document.querySelectorAll('.board-space');
 const playerX = document.getElementById('player-x');
@@ -71,35 +71,35 @@ function winnerCheck(boardSpaceId) {
   if (playerControl === 1) {
     if (gameControl[line][0] === gameControl[line][1] && gameControl[line][1] === gameControl[line][2]) {
       winnerMessage.innerText = "Player X won!";
-      fadeINOut (newGame, mainContent);
+      fadeINOut (newGame, gameBoard);
     } else if (gameControl[0][column] === gameControl[1][column] && gameControl[1][column] === gameControl[2][column]) {
       winnerMessage.innerText = "Player X won!";
-      fadeINOut (newGame, mainContent);
+      fadeINOut (newGame, gameBoard);
     } else if (gameControl[0][0] === "x" && gameControl[1][1] === "x" && gameControl[2][2] === "x") {
       winnerMessage.innerText = "Player X won!";
-      fadeINOut (newGame, mainContent);
+      fadeINOut (newGame, gameBoard);
     } else if (gameControl[0][2] === "x" && gameControl[1][1] === "x" && gameControl[2][0] === "x") {
       winnerMessage.innerText = "Player X won!";
-      fadeINOut (newGame, mainContent);
+      fadeINOut (newGame, gameBoard);
     } else if(roundCounter === 5) {
       winnerMessage.innerText = "Draw";
-      fadeINOut (newGame, mainContent);
+      fadeINOut (newGame, gameBoard);
     } else {
       return;
     }
   } else if (playerControl === 2) {
     if (gameControl[line][0] === gameControl[line][1] && gameControl[line][1] === gameControl[line][2]) {
       winnerMessage.innerText = "Player O won!";
-      fadeINOut (newGame, mainContent);
+      fadeINOut (newGame, gameBoard);
     } else if (gameControl[0][column] === gameControl[1][column] && gameControl[1][column] === gameControl[2][column]) {
       winnerMessage.innerText = "Player O won!";
-      fadeINOut (newGame, mainContent);
+      fadeINOut (newGame, gameBoard);
     } else if (gameControl[0][0] === "o" && gameControl[1][1] === "o" && gameControl[2][2] === "o") {
       winnerMessage.innerText = "Player O won!";
-      fadeINOut (newGame, mainContent);
+      fadeINOut (newGame, gameBoard);
     } else if (gameControl[0][2] === "o" && gameControl[1][1] === "o" && gameControl[2][0] === "o") {
       winnerMessage.innerText = "Player O won!";
-      fadeINOut (newGame, mainContent);
+      fadeINOut (newGame, gameBoard);
     } else {
       return
     }
@@ -122,11 +122,11 @@ function controlReload () {
 
 playBtn.addEventListener('click', () => {
   controlReload();
-  fadeINOut(mainContent, startGame);
+  fadeINOut(gameBoard, startGame);
 });
 
 newGame.addEventListener('click', () => {
-  fadeINOut(mainContent, newGame)
+  fadeINOut(gameBoard, newGame)
   controlReload();
 })
 

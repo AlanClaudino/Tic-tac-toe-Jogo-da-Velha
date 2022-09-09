@@ -20,6 +20,13 @@ body {
   height: 100vh;
 }
 
+.container {
+  padding: 0.7rem;
+  background: linear-gradient(135deg, var(--clr-300) 0%, var(--clr-100) 100%);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+
 .btn {
   font-size: 1rem;
   padding: 0.5rem;
@@ -48,7 +55,32 @@ h1 {
   border-bottom: 3px solid var(--clr-400);
 }
 
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  align-self: start;
+}
+
+header p {
+  align-self: flex-end;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
 /* First Screen */
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 367px;
+  width: 100%;
+}
 
 #start-game {
   color: var(--clr-400);
@@ -57,54 +89,35 @@ h1 {
   padding: 1rem;
 }
 
-#start-game h1 {
-  align-self: start;
-}
-
-#start-game p {
-  align-self: flex-end;
-  font-size: 1.5rem;
-}
-
 /* Game screen */
 
-#main-content {
+.game-container {
+  padding: 0.5rem;
   display: none;
   flex-direction: column;
-}
-
-.container {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  gap: 1rem;
 }
 
 .score-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 .score-container p {
- background-color: var(--clr-200);
- box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
- border-radius: 0.5rem;
+ padding: 0.1rem 0.3rem;
+ margin: 0.5rem 0;
 }
 
 #board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 0.5rem;
-  /* background-color: var(--clr-400); */
-  /* box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2); */
   gap: 0.5rem;
   border-radius: 0.5rem;
 }
 
 .board-space {
-  min-width: 5rem;
   background-color: var(--clr-200);
   min-height: 5rem;
   border-radius: 0.5rem;
@@ -129,6 +142,7 @@ h1 {
 #new-game {
   display: none;
   flex-direction: column;
+  padding: 1rem;
 }
 
 #winner-message {
