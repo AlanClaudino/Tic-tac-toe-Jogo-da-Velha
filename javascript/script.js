@@ -47,7 +47,6 @@ function updatePlayer() {
 }
 
 function write(boardSpace) {
-  if (boardSpace.innerText != "") return;
   if (playerControl === 1) {
     boardSpace.innerText = "X"    
   } else {
@@ -59,7 +58,6 @@ function write(boardSpace) {
 function updateGameControl(boardSpaceId) {
   let line = Math.trunc(boardSpaceId / 3);
   let column = Math.trunc(boardSpaceId % 3);
-  console.log (line, column)
   if (playerControl === 1) {
     gameControl[line][column] = "x";
   } else {
@@ -148,11 +146,15 @@ backBtn.forEach((key) => {
 
 boardSpace.forEach( (key) => {
   key.addEventListener('click', () => {
-    let keyId = parseInt(key.id)
-    write(key);
-    updateGameControl(keyId);
-    winnerCheck(keyId)
-    updatePlayer();
+    if (key.innerText != "") {
+      return
+    } else {
+      let keyId = parseInt(key.id)
+      write(key);
+      updateGameControl(keyId);
+      winnerCheck(keyId)
+      updatePlayer();
+    }
   })
 })
 
