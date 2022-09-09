@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  padding: 0.7rem;
+  padding: 1rem;
   background: linear-gradient(135deg, var(--clr-300) 0%, var(--clr-100) 100%);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
@@ -34,14 +34,12 @@ body {
   color: white;
   border: none;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
-  margin: 1rem 0;
   border-radius: 5px;
 }
 
 p {
   font-size: 1.5rem;
   font-weight: 700;
-  padding: 0.5rem 1rem;
   color: var(--clr-400);
 }
 
@@ -92,7 +90,7 @@ header p {
 /* Game screen */
 
 .game-container {
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -102,11 +100,11 @@ header p {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 0.5rem 0;
 }
 
 .score-container p {
  padding: 0.1rem 0.3rem;
- margin: 0.5rem 0;
 }
 
 #board {
@@ -137,18 +135,25 @@ header p {
   color: var(--clr-400);
 }
 
+.game-container .back-btn {
+  align-self: center;
+}
+
 /* End game screen */
 
 #new-game {
   display: none;
   flex-direction: column;
   padding: 1rem;
+  gap: 0.5rem;
 }
 
 #winner-message {
   font-size: 2rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
+
 /* Animations */
 
 .fade-in {

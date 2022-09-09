@@ -10,6 +10,8 @@ const winnerMessage = document.getElementById('winner-message');
 
 const playBtn = document.getElementById('play-btn');
 const newGameBtn = document.getElementById('new-game-btn');
+const backBtn = document.querySelectorAll('.back-btn');
+
 
 let playerControl;
 let gameControl;
@@ -106,7 +108,7 @@ function winnerCheck(boardSpaceId) {
   }
 }
 
-function controlReload () {
+function controlReload() {
   playerControl = 1
   gameControl = [[1, 1, 1], [1, 1, 1], [1, 1, 1]];
   roundCounter = 1;
@@ -118,6 +120,10 @@ function controlReload () {
   playerX.classList.add('underline');
 }
 
+function backFirstScreen() {
+  fadeINOut()
+}
+
 // Events
 
 playBtn.addEventListener('click', () => {
@@ -125,9 +131,19 @@ playBtn.addEventListener('click', () => {
   fadeINOut(gameBoard, startGame);
 });
 
-newGame.addEventListener('click', () => {
+newGameBtn.addEventListener('click', () => {
   fadeINOut(gameBoard, newGame)
   controlReload();
+})
+
+backBtn.forEach((key) => {
+  key.addEventListener('click', () => {
+    if(key.id === 'back-game-section') {
+      fadeINOut(startGame, gameBoard);
+    } else if (key.id === 'back-new-game') {
+      fadeINOut(startGame, newGame);
+    }
+  })
 })
 
 boardSpace.forEach( (key) => {
