@@ -1,8 +1,9 @@
 :root {
-  --clr-100: #F6F54D;
-  --clr-200: #FEB139;
-  --clr-300: #F55353;
-  --clr-400: #143F6B;
+  --clr-100: #EAE2B7;
+  --clr-200: #FCBF49;
+  --clr-300: #F77F00;
+  --clr-400: #D62828;
+  --clr-500: #003049;
 }
 
 * {
@@ -12,7 +13,7 @@
 }
 
 body {
-  background: linear-gradient(45deg, var(--clr-100) 0%, var(--clr-300) 100%);
+  background-color: var(--clr-100);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,7 +23,7 @@ body {
 
 .container {
   padding: 1rem;
-  background: linear-gradient(135deg, var(--clr-300) 0%, var(--clr-100) 100%);
+  background-color: var(--clr-200);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
 }
@@ -40,12 +41,12 @@ body {
 p {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--clr-400);
+  color: var(--clr-500);
 }
 
 h1 {
   font-size: 3.5rem;
-  color: var(--clr-400);
+  color: var(--clr-500);
   text-align: center;
 }
 
@@ -76,7 +77,7 @@ header p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 367px;
+  min-height: 389px;
   width: 100%;
 }
 
@@ -85,6 +86,12 @@ header p {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+}
+
+#icon {
+  width: 220px;
+  margin-bottom: 2rem;
+  align-self: center;
 }
 
 /* Game screen */
@@ -110,16 +117,15 @@ header p {
 #board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 0.5rem;
+  margin: 1rem 0;
   gap: 0.5rem;
   border-radius: 0.5rem;
+  background-color: var(--clr-400);
 }
 
 .board-space {
   background-color: var(--clr-200);
   min-height: 5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 2px 2px rgba(20, 64, 107, 0.2);
 }
 
 .board-space {
@@ -132,11 +138,11 @@ header p {
 }
 
 .player-o-style {
-  color: var(--clr-400);
+  color: var(--clr-500);
 }
 
 .game-container .back-btn {
-  align-self: center;
+  align-self: stretch;
 }
 
 /* End game screen */

@@ -118,10 +118,6 @@ function controlReload() {
   playerX.classList.add('underline');
 }
 
-function backFirstScreen() {
-  fadeINOut()
-}
-
 // Events
 
 playBtn.addEventListener('click', () => {
@@ -130,8 +126,8 @@ playBtn.addEventListener('click', () => {
 });
 
 newGameBtn.addEventListener('click', () => {
-  fadeINOut(gameBoard, newGame)
   controlReload();
+  fadeINOut(gameBoard, newGame)
 })
 
 backBtn.forEach((key) => {
